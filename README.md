@@ -1,9 +1,9 @@
 # CI/CD demo
 
-### 1. AWS CodeCommit (Source Code Stage)
-=========================================
+  ## 1. AWS CodeCommit (Source Code Stage)
+ 
 
-  ***Initialize your Git repository***
+  ### Initialize your Git repository
   
   ***1.*** Download [Git](https://git-scm.com/downloads)
 
@@ -15,7 +15,7 @@
     git add . 
     git commit -m "first commit"
   
-  ***Get the Git credentials for AWS CodeCommit***
+  ### Get the Git credentials for AWS CodeCommit
   
   ***4.*** Create an IAM user
   
@@ -25,7 +25,7 @@
   
   ***7.*** Download the csv to save these credentials
  
-   ***Create your CodeCommit repository***
+   ### Create your CodeCommit repository
    
   ***8.*** Go to AWs CodeCommit service --> Create repository --> enter a repository name and click ***Create***
   
@@ -40,8 +40,8 @@
   ***11.*** Refresh your CodeCommit page and you shoud see the code files there
   
   
-
-### 2. AWS CodeBuild (Test & Build)
+  
+## 2. AWS CodeBuild (Test & Build)
 
 
   ***12.*** Create a bucket to save the build files (build artifacts) 
@@ -70,9 +70,9 @@
   ***16.*** Go back to your S3 bucket to confirm the files are there. If you download and extract the zip files, you should find a folder with a .war file, scripts folder, and the appsepc.yml file.
   
   
-### 3. AWS CodeDeploy (DEPLOY!)
+## 3. AWS CodeDeploy (DEPLOY!)
 
-***Launch an EC2 instance***
+### Launch an EC2 instance
 
   ***17.*** Create an EC2 role with AmazonEC2RoleforAWSCodeDeploy policy attached.
   
@@ -83,7 +83,7 @@
   * ***Security Group:*** ensure it have a rule to all 80  from anywhere
 
 
-***A. Create Application***
+### A. Create Application
 
   ***19.*** Go to AWS CodeDeploy --> Applications --> click ***Create application*** and enter the below:
 * ***Application name:*** enter any name
@@ -91,7 +91,7 @@
 
 
 
-***B. Create Deployment Group***
+### B. Create Deployment Group
 
   ***20.*** Create an IAM role for CodeDeploy with a AWSCodeDeployRole AWS managed policy attached
   
@@ -106,7 +106,7 @@
   Leave all other configrations as default and click ***Create deployment group**
   
 
-***C. Create Deployment***
+### C. Create Deployment
 
   ***22.*** Click ***Create deployment** and set the below:
   * ***Deployment group:*** chose the deployment group you just created
@@ -120,7 +120,7 @@
   
   
   
-### 4. AWS CodePipleine 
+## 4. AWS CodePipleine 
 
 I'll leave this to you, it is super simple. Go to AWS CodePipeline, create pipeline, and then just add the three stage you created above, and Viola.
 Now go change in the code and check it, it should initiate the whole stages automatically
