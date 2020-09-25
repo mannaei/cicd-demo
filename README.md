@@ -22,7 +22,7 @@
   
   ***F.*** Clink on ***Security Credentials** tab --> under ***HTTPS Git credentials for AWS CodeCommit** click on ***Generate credentials***
   
-  ***G>*** Download the csv to save these credentials
+  ***G.*** Download the csv to save these credentials
  
    ***Create your CodeCommit repository***
    
