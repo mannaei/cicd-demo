@@ -90,11 +90,11 @@
 
 
 
-***A. Create Application***
+***B. Create Deployment Group***
 
-  ***21.*** Create an IAM role for CodeDeploy with a AWSCodeDeployRole AWS managed policy attached
+  ***20.*** Create an IAM role for CodeDeploy with a AWSCodeDeployRole AWS managed policy attached
   
-  ***20.*** Click ***Create deployment group*** and enter the below:
+  ***21.*** Click ***Create deployment group*** and enter the below:
   * ***Enter a deployment group name:*** enter any name
   * ***Enter a service role:*** choose the role you created in the previous step
   * ***Deployment type:*** In-place
@@ -104,4 +104,23 @@
   
   Leave all other configrations as default and click ***Create deployment group**
   
+
+***C. Create Deployment***
+
+  ***22.*** Click ***Create deployment** and set the below:
+  * ***Deployment group:*** chose the deployment group you just created
+  * ***Revision type:*** My application is stored in Amazon S3
+  * ***Revision location:*** enter the location of the CodeBuild artifacts as s3://"Bucket Name"/"Buildartifact.zip"
+  * ***Revision type:*** .zip
   
+  Leave all other as default and click ***Create deployment***
+  
+  This will start the deployment, you can click on the ***view events** to see the status. When done, go grap your EC2 public IP and put in the browser and you should see you application running. ***Congratulations !!***
+  
+  
+  
+### 4. AWS CodePipleine 
+
+I'll leave this to you, it is super simple. Go to AWS CodePipeline, create pipeline, and then just add the three stage you created above, and Viola.
+Now go change in the code and check it, it should initiate the whole stages automatically
+
