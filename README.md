@@ -1,6 +1,7 @@
 # CI/CD demo
 
 ### 1. AWS CodeCommit (Source Code Stage)
+=========================================
 
   ***Initialize your Git repository***
   
